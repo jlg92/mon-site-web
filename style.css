@@ -5,6 +5,16 @@ body {
     padding: 20px;
 }
 
-h1 {
-    color: #007acc;
+#login-form {
+    margin-top: 50px;
+}
+
+#password-input {
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
 }
