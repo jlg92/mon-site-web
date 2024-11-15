@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site Web</title>
+    <title>Mon Site Web Protégé</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Bienvenue sur mon site web</h1>
-    <p>Ceci est une page hébergée sur GitHub Pages !</p>
+    <div id="login-form">
+        <h2>Veuillez entrer le mot de passe</h2>
+        <input type="password" id="password-input" placeholder="Mot de passe">
+        <button onclick="checkPassword()">Entrer</button>
+        <p id="error-message" style="color: red; display: none;">Mot de passe incorrect</p>
+    </div>
+
+    <div id="content" style="display: none;">
+        <h1>Bienvenue sur la page protégée</h1>
+        <p>Vous avez réussi à entrer le bon mot de passe !</p>
+    </div>
 </body>
 </html>
