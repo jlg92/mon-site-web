@@ -1,5 +1,5 @@
 // Mot de passe défini (modifiez-le ici)
-const PASSWORD = "monMotDePasse";
+const PASSWORD = "juju";
 
 // Fonction pour vérifier le mot de passe
 function checkPassword() {
