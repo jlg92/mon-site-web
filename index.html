@@ -3,38 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cours de Bourse</title>
+    <title>Accès Protégé</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Cours de Bourse : TotalEnergies, Air Liquide, Bitcoin</h1>
+    <div id="login-container">
+        <h1>Accès au Site Protégé</h1>
+        <input type="password" id="password" placeholder="Entrez le mot de passe">
+        <button id="login-btn">Accéder</button>
+        <p id="error-msg" style="color: red;"></p>
+    </div>
 
-    <!-- Widget TradingView pour afficher les cours -->
-    <div id="stock-widget">
-        <iframe
-            src="https://www.tradingview.com/widgetembed/?symbol=EURONEXT:TTE&interval=D&theme=light&style=1&toolbarbg=f1f3f6&hide_legend=true&save_image=false&studies=[]&withdateranges=true&hide_side_toolbar=false&allow_symbol_change=false&details=false&hotlist=false&calendar=false"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-        <iframe
-            src="https://www.tradingview.com/widgetembed/?symbol=EURONEXT:AI&interval=D&theme=light&style=1&toolbarbg=f1f3f6&hide_legend=true&save_image=false&studies=[]&withdateranges=true&hide_side_toolbar=false&allow_symbol_change=false&details=false&hotlist=false&calendar=false"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-        <iframe
-            src="https://www.tradingview.com/widgetembed/?symbol=BITSTAMP:BTCUSD&interval=D&theme=light&style=1&toolbarbg=f1f3f6&hide_legend=true&save_image=false&studies=[]&withdateranges=true&hide_side_toolbar=false&allow_symbol_change=false&details=false&hotlist=false&calendar=false"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
+    <div id="content" style="display: none;">
+        <h1>Bienvenue sur le site sécurisé</h1>
+        <p>Vous avez accédé au contenu protégé.</p>
+        <div id="stock-widget">
+            <!-- Vos widgets ou contenu ici -->
+            <iframe
+                src="https://www.tradingview.com/widgetembed/?symbol=EURONEXT:TTE&interval=D&theme=light"
+                width="100%"
+                height="400"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </body>
 </html>
