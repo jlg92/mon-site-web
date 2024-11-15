@@ -5,10 +5,22 @@ body {
     color: #333;
 }
 
-h1 {
-    margin-bottom: 20px;
+#login-container {
+    margin-top: 100px;
 }
 
-#stock-widget iframe {
-    margin: 20px 0;
+#password {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#login-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#error-msg {
+    margin-top: 10px;
 }
