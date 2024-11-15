@@ -1,21 +1,17 @@
-// Fonction pour récupérer le cours de TotalEnergies
-async function fetchStockPrice() {
-    try {
-        // Utilisation de l'API Yahoo Finance
-        const response = await fetch("https://query1.finance.yahoo.com/v8/finance/chart/TTE.PA?region=FR&lang=fr");
-        const data = await response.json();
+// Mot de passe défini pour accéder au site
+const PASSWORD = "votremotdepasse";
 
-        // Extraction du prix actuel
-        const price = data.chart.result[0].meta.regularMarketPrice;
+// Gestion du clic sur le bouton de connexion
+document.getElementById("login-btn").addEventListener("click", () => {
+    const inputPassword = document.getElementById("password").value;
+    const errorMsg = document.getElementById("error-msg");
 
-        // Affichage du prix dans le HTML
-        document.getElementById("stock-price").innerText = `Prix actuel : ${price} EUR`;
-    } catch (error) {
-        console.error("Erreur lors de la récupération du cours :", error);
-        document.getElementById("stock-price").innerText = "Impossible de récupérer le cours";
+    if (inputPassword === PASSWORD) {
+        // Afficher le contenu et masquer le formulaire de connexion
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    } else {
+        // Afficher un message d'erreur
+        errorMsg.textContent = "Mot de passe incorrect. Veuillez réessayer.";
     }
-}
-
-// Mise à jour du cours toutes les 10 secondes
-fetchStockPrice();
-setInterval(fetchStockPrice, 10000);
+});
