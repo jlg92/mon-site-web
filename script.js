@@ -1,17 +1,24 @@
-// Mot de passe défini pour accéder au site
-const PASSWORD = "juju";
+// Mot de passe à définir
+const PASSWORD = "juju"; // Remplacez par votre mot de passe
 
-// Gestion du clic sur le bouton de connexion
-document.getElementById("login-btn").addEventListener("click", () => {
-    const inputPassword = document.getElementById("password").value;
+// Attendre que le DOM soit chargé
+document.addEventListener("DOMContentLoaded", () => {
+    const loginButton = document.getElementById("login-btn");
+    const passwordInput = document.getElementById("password");
     const errorMsg = document.getElementById("error-msg");
 
-    if (inputPassword === PASSWORD) {
-        // Afficher le contenu et masquer le formulaire de connexion
-        document.getElementById("login-container").style.display = "none";
-        document.getElementById("content").style.display = "block";
-    } else {
-        // Afficher un message d'erreur
-        errorMsg.textContent = "Mot de passe incorrect. Veuillez réessayer.";
-    }
+    loginButton.addEventListener("click", () => {
+        const inputPassword = passwordInput.value;
+
+        // Vérifier si le mot de passe est correct
+        if (inputPassword === PASSWORD) {
+            // Afficher le contenu protégé
+            document.getElementById("login-container").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        } else {
+            // Afficher un message d'erreur
+            errorMsg.textContent = "Mot de passe incorrect. Essayez de nouveau.";
+            errorMsg.style.color = "red";
+        }
+    });
 });
