@@ -1,5 +1,5 @@
 // Mot de passe défini pour accéder au site
-const PASSWORD = "votremotdepasse";
+const PASSWORD = "juju";
 
 // Gestion du clic sur le bouton de connexion
 document.getElementById("login-btn").addEventListener("click", () => {
